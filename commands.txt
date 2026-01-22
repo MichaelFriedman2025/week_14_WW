@@ -14,3 +14,5 @@ oc apply -f .\api-service.yaml
 oc expose svc api-weapons
 
 oc get route
+
+oc get all

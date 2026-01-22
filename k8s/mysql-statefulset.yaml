@@ -21,7 +21,7 @@ spec:
           env:
             - name: MYSQL_DATABASE
               value: mydatabase
-            - name: MYSQL_PASSWORD
+            - name: MYSQL_ROOT_PASSWORD
               value: "1234"
           volumeMounts:
             - name: mysql-data
