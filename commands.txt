@@ -1,0 +1,5 @@
+
+docker build -t michaelfriedman1/weapons-api:v1 .
+
+docker push michaelfriedman1/weapons-api:v1
+
