@@ -1,5 +1,6 @@
 .gitignore
 commands.txt
 data/
+screenshots/
 .venv/
 README.md
