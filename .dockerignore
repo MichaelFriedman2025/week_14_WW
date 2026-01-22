@@ -1,0 +1,4 @@
+.gitignore
+commands.txt
+data/
+.venv/
