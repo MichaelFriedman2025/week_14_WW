@@ -1,5 +1,16 @@
 
-docker build -t michaelfriedman1/weapons-api:v1 .
+docker build -t michaelfriedman1/weapons-api:v2 .
 
-docker push michaelfriedman1/weapons-api:v1
+docker push michaelfriedman1/weapons-api:v2
 
+oc apply -f .\mysql-statefulset.yaml
+
+oc apply -f .\mysql-service.yaml 
+
+oc apply -f .\api-deployment.yaml
+
+oc apply -f .\api-service.yaml 
+
+oc expose svc api-weapons
+
+oc get route

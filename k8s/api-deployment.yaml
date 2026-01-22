@@ -1,0 +1,29 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-weapons
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: api-weapons
+  template:
+    metadata:
+      labels:
+        app: api-weapons
+    spec:
+      containers:
+      - name: api
+        image: michaelfriedman1/weapons-api:v2
+        ports:
+        - containerPort: 8080
+          env:
+          - name: DB_HOST
+            value: mysql
+          - name: MYSQL_DATABASE
+            value: mydatabase
+          - name: DB_USER
+            value: root
+          - name: MYSQL_PASSWORD
+            value: "1234"
